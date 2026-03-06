@@ -358,7 +358,6 @@ export default function ChatScreen({
                 </TornNote>
             </div>
 
-            {/* ── FIX: changed flexDirection from 'column-reverse' to 'column' ── */}
             <div style={{
                 flex: 1,
                 overflowY: 'auto',
@@ -371,6 +370,8 @@ export default function ChatScreen({
                 scrollbarColor: 'rgba(0,0,0,0.12) transparent',
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {/* Spacer pushes messages to bottom */}
+                    <div style={{ flex: 1, minHeight: 0 }} />
                     <AnimatePresence initial={false}>
                         {/* ── FIX: removed .reverse() so newest messages appear at bottom ── */}
                         {messages.map(msg => (
