@@ -362,18 +362,15 @@ export default function ChatScreen({
                 flex: 1,
                 overflowY: 'auto',
                 position: 'relative', zIndex: 5,
-                padding: '12px 0 8px',
-                display: 'flex', flexDirection: 'column',
-                gap: 8,
-                /* scrollbar */
+                display: 'flex',
+                flexDirection: 'column',
                 scrollbarWidth: 'thin',
                 scrollbarColor: 'rgba(0,0,0,0.12) transparent',
             }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                    {/* Spacer pushes messages to bottom */}
-                    <div style={{ flex: 1, minHeight: 0 }} />
+                {/* Spacer grows to push messages to the bottom */}
+                <div style={{ flex: 1 }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '12px 0 8px' }}>
                     <AnimatePresence initial={false}>
-                        {/* ── FIX: removed .reverse() so newest messages appear at bottom ── */}
                         {messages.map(msg => (
                             <ChatBubble key={msg.id} msg={msg} />
                         ))}
