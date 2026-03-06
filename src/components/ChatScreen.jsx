@@ -358,33 +358,35 @@ export default function ChatScreen({
                 </TornNote>
             </div>
 
-            {/* ══ MESSAGES ══ */}
             <div style={{
                 flex: 1,
                 overflowY: 'auto',
                 position: 'relative', zIndex: 5,
                 padding: '12px 0 8px',
-                display: 'flex', flexDirection: 'column', gap: 8,
+                display: 'flex', flexDirection: 'column-reverse', /* Fills from bottom-up naturally */
+                gap: 8,
                 /* scrollbar */
                 scrollbarWidth: 'thin',
                 scrollbarColor: 'rgba(0,0,0,0.12) transparent',
             }}>
-                <AnimatePresence initial={false}>
-                    {messages.map(msg => (
-                        <ChatBubble key={msg.id} msg={msg} />
-                    ))}
-                    {peerTyping && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9 }}
-                            style={{ padding: '0 16px', color: '#888', fontSize: 13, alignSelf: 'flex-start' }}
-                        >
-                            typing...
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-                <div ref={bottomRef} style={{ height: 4 }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    <AnimatePresence initial={false}>
+                        {peerTyping && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                style={{ padding: '0 16px', color: '#888', fontSize: 13, alignSelf: 'flex-start' }}
+                            >
+                                typing...
+                            </motion.div>
+                        )}
+                        {[...messages].reverse().map(msg => (
+                            <ChatBubble key={msg.id} msg={msg} />
+                        ))}
+                    </AnimatePresence>
+                    <div ref={bottomRef} style={{ height: 4 }} />
+                </div>
             </div>
 
             {/* ══ BOTTOM INPUT BAR — flex-shrink:0 always stays visible ══ */}
