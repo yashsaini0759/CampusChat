@@ -358,12 +358,13 @@ export default function ChatScreen({
                 </TornNote>
             </div>
 
+            {/* ── FIX: changed flexDirection from 'column-reverse' to 'column' ── */}
             <div style={{
                 flex: 1,
                 overflowY: 'auto',
                 position: 'relative', zIndex: 5,
                 padding: '12px 0 8px',
-                display: 'flex', flexDirection: 'column-reverse', /* Fills from bottom-up naturally */
+                display: 'flex', flexDirection: 'column',
                 gap: 8,
                 /* scrollbar */
                 scrollbarWidth: 'thin',
@@ -371,6 +372,10 @@ export default function ChatScreen({
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                     <AnimatePresence initial={false}>
+                        {/* ── FIX: removed .reverse() so newest messages appear at bottom ── */}
+                        {messages.map(msg => (
+                            <ChatBubble key={msg.id} msg={msg} />
+                        ))}
                         {peerTyping && (
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
@@ -381,9 +386,6 @@ export default function ChatScreen({
                                 typing...
                             </motion.div>
                         )}
-                        {[...messages].reverse().map(msg => (
-                            <ChatBubble key={msg.id} msg={msg} />
-                        ))}
                     </AnimatePresence>
                     <div ref={bottomRef} style={{ height: 4 }} />
                 </div>
