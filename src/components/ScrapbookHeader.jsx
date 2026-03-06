@@ -43,7 +43,7 @@ export default function ScrapbookHeader({ onlineCount = 247 }) {
                 </div>
                 <span
                     style={{
-                        fontFamily: 'Caveat, cursive',
+                        fontFamily: 'Caveat, sans-serif',
                         fontWeight: 800,
                         fontSize: 26,
                         color: '#1a1a1a',
@@ -58,7 +58,7 @@ export default function ScrapbookHeader({ onlineCount = 247 }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                 <span
                     style={{
-                        fontFamily: 'Patrick Hand, cursive',
+                        fontFamily: 'Patrick Hand, sans-serif',
                         fontSize: 15,
                         fontWeight: 600,
                         color: '#333',

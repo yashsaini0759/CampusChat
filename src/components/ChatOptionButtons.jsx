@@ -40,7 +40,7 @@ export default function ChatOptionButtons({ selected, onChange }) {
                             background: isSelected
                                 ? `linear-gradient(90deg, ${border}, ${bg})`
                                 : bg,
-                            fontFamily: 'Caveat, cursive',
+                            fontFamily: 'Caveat, sans-serif',
                             fontWeight: 800,
                             fontSize: 22,
                             letterSpacing: '0.05em',

@@ -64,7 +64,7 @@ function TornNote({ children, bg = '#ffffff', fontWeight = 400, tape = false, ta
                 background: bg,
                 padding: '8px 18px',
                 textAlign: 'center',
-                fontFamily: 'Patrick Hand, cursive',
+                fontFamily: 'Patrick Hand, sans-serif',
                 fontWeight,
                 fontSize: 15,
                 color: '#1a1a1a',
@@ -85,7 +85,7 @@ function ChatBubble({ msg }) {
                 <span style={{
                     background: 'rgba(0,0,0,0.06)', padding: '6px 16px',
                     borderRadius: 20, fontSize: 13.5, color: '#555',
-                    fontFamily: 'Patrick Hand, cursive', fontWeight: 600,
+                    fontFamily: 'Patrick Hand, sans-serif', fontWeight: 600,
                     boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.04)'
                 }}>
                     {msg.text}
@@ -111,7 +111,7 @@ function ChatBubble({ msg }) {
                 padding: '10px 16px',
                 borderRadius: isMe ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
                 background: isMe ? '#f2b8c6' : '#c0d4ec',
-                fontFamily: 'Patrick Hand, cursive',
+                fontFamily: 'Patrick Hand, sans-serif',
                 fontSize: 15.5,
                 color: '#1a1a1a',
                 boxShadow: isMe
@@ -127,7 +127,7 @@ function ChatBubble({ msg }) {
                     color: 'rgba(0,0,0,0.35)',
                     textAlign: isMe ? 'right' : 'left',
                     marginTop: 2,
-                    fontFamily: 'Patrick Hand, cursive',
+                    fontFamily: 'Patrick Hand, sans-serif',
                 }}>
                     {msg.time}
                 </span>
@@ -270,7 +270,7 @@ export default function ChatScreen({
             height: '100dvh',
             display: 'flex', flexDirection: 'column',
             background: '#f5e8d5',
-            fontFamily: 'Patrick Hand, cursive',
+            fontFamily: 'Patrick Hand, sans-serif',
             overflow: 'hidden',
         }}>
             {/* ── Paper texture overlay ── */}
@@ -314,7 +314,7 @@ export default function ChatScreen({
                         flexShrink: 0,
                     }}>🎓</div>
                     <span style={{
-                        fontFamily: 'Caveat, cursive', fontWeight: 800,
+                        fontFamily: 'Caveat, sans-serif', fontWeight: 800,
                         fontSize: 22, color: '#1a1a1a',
                     }}>ChatCampus</span>
                 </div>
@@ -348,7 +348,7 @@ export default function ChatScreen({
 
                 {/* Note 2 — bold, bigger */}
                 <TornNote bg="#f9f3e8" fontWeight={700}>
-                    <span style={{ fontFamily: 'Caveat, cursive', fontSize: 17, fontWeight: 800 }}>
+                    <span style={{ fontFamily: 'Caveat, sans-serif', fontSize: 17, fontWeight: 800 }}>
                         You're now chatting with{' '}
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                             {matchName} from {matchCollege}
@@ -421,7 +421,7 @@ export default function ChatScreen({
                                     border: endConfirm ? '2.5px solid #666' : '2.5px solid #c83030',
                                     background: endConfirm ? '#888' : '#e03838',
                                     color: '#fff',
-                                    fontFamily: 'Caveat, cursive',
+                                    fontFamily: 'Caveat, sans-serif',
                                     fontWeight: 800, fontSize: 18,
                                     cursor: 'pointer',
                                     boxShadow: endConfirm ? '2px 3px 0 #666' : '2px 3px 0 #a01020',
@@ -447,7 +447,7 @@ export default function ChatScreen({
                                     borderRadius: 12,
                                     border: '2px solid #ddd',
                                     background: '#fffdf7',
-                                    fontFamily: 'Patrick Hand, cursive',
+                                    fontFamily: 'Patrick Hand, sans-serif',
                                     fontSize: 15, color: '#333',
                                     outline: 'none',
                                     boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.06)',
@@ -500,7 +500,7 @@ export default function ChatScreen({
                                 border: '3px solid #1a73e8',
                                 background: '#4285f4',
                                 color: '#fff',
-                                fontFamily: 'Caveat, cursive',
+                                fontFamily: 'Caveat, sans-serif',
                                 fontWeight: 800, fontSize: 24,
                                 cursor: 'pointer',
                                 boxShadow: '3px 4px 0 #1060a0',

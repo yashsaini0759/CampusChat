@@ -53,7 +53,7 @@ export default function SearchingScreen({ onCancel }) {
             background: '#f5e8d5',
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center',
-            fontFamily: 'Patrick Hand, cursive',
+            fontFamily: 'Patrick Hand, sans-serif',
             overflow: 'hidden',
         }}>
             {/* Paper-texture overlay */}
@@ -118,7 +118,7 @@ export default function SearchingScreen({ onCancel }) {
 
                 {/* Title */}
                 <div style={{
-                    fontFamily: 'Caveat, cursive',
+                    fontFamily: 'Caveat, sans-serif',
                     fontWeight: 800, fontSize: 28, color: '#1a1a1a',
                     marginBottom: 10,
                 }}>
@@ -174,7 +174,7 @@ export default function SearchingScreen({ onCancel }) {
                         border: '2.5px solid #c83030',
                         background: '#e03838',
                         color: '#fff',
-                        fontFamily: 'Caveat, cursive',
+                        fontFamily: 'Caveat, sans-serif',
                         fontWeight: 800, fontSize: 20,
                         cursor: 'pointer',
                         boxShadow: '2px 3px 0 #a01020',

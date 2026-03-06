@@ -83,7 +83,7 @@ export default function ScrapbookCard({ onStart }) {
                     <TitleDoodles />
                     <h1
                         style={{
-                            fontFamily: 'Caveat, cursive',
+                            fontFamily: 'Caveat, sans-serif',
                             fontWeight: 800,
                             fontSize: 'clamp(26px, 6vw, 38px)',
                             color: '#1a1a1a',
@@ -131,7 +131,7 @@ export default function ScrapbookCard({ onStart }) {
                         borderRadius: 50,
                         border: '3px solid #d4a800',
                         background: '#f5c842',
-                        fontFamily: 'Caveat, cursive',
+                        fontFamily: 'Caveat, sans-serif',
                         fontWeight: 800,
                         fontSize: 26,
                         cursor: 'pointer',

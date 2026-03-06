@@ -10,7 +10,7 @@ export default function GenderButtons({ selected, onChange }) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 4 }}>
             <label style={{
-                fontFamily: 'Caveat, cursive',
+                fontFamily: 'Caveat, sans-serif',
                 fontWeight: 800,
                 fontSize: 18,
                 color: '#1a1a1a',
@@ -35,7 +35,7 @@ export default function GenderButtons({ selected, onChange }) {
                                 border: `2.5px solid ${border}`,
                                 background: isSelected ? active : bg,
                                 color: isSelected ? '#fff' : '#1a1a1a',
-                                fontFamily: 'Caveat, cursive',
+                                fontFamily: 'Caveat, sans-serif',
                                 fontWeight: 800,
                                 fontSize: 20,
                                 cursor: 'pointer',

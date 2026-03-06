@@ -7,7 +7,7 @@ export function NameInput({ value, onChange }) {
     return (
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, padding: '4px 0' }}>
             <label style={{
-                fontFamily: 'Caveat, cursive', fontWeight: 800,
+                fontFamily: 'Caveat, sans-serif', fontWeight: 800,
                 fontSize: 20, color: '#1a1a1a', minWidth: 78, flexShrink: 0,
             }}>
                 Name
@@ -24,7 +24,7 @@ export function NameInput({ value, onChange }) {
                     background: 'transparent',
                     padding: '4px 2px',
                     fontSize: 16,
-                    fontFamily: 'Patrick Hand, cursive',
+                    fontFamily: 'Patrick Hand, sans-serif',
                     color: '#333',
                     outline: 'none',
                 }}
@@ -83,7 +83,7 @@ export function CollegeInput({ value, onChange }) {
             style={{ display: 'flex', alignItems: 'baseline', gap: 12, padding: '4px 0', position: 'relative' }}
         >
             <label style={{
-                fontFamily: 'Caveat, cursive', fontWeight: 800,
+                fontFamily: 'Caveat, sans-serif', fontWeight: 800,
                 fontSize: 20, color: '#1a1a1a', minWidth: 78, flexShrink: 0,
             }}>
                 Colleges
@@ -108,7 +108,7 @@ export function CollegeInput({ value, onChange }) {
                         background: 'transparent',
                         padding: '4px 2px',
                         fontSize: 16,
-                        fontFamily: 'Patrick Hand, cursive',
+                        fontFamily: 'Patrick Hand, sans-serif',
                         color: '#333',
                         outline: 'none',
                     }}
@@ -154,7 +154,7 @@ export function CollegeInput({ value, onChange }) {
                                         background: highlighted === idx ? '#fff9e6' : 'transparent',
                                         border: 'none',
                                         borderBottom: idx < suggestions.length - 1 ? '1px solid #f0f0f0' : 'none',
-                                        fontFamily: 'Patrick Hand, cursive',
+                                        fontFamily: 'Patrick Hand, sans-serif',
                                         fontSize: 15,
                                         color: '#222',
                                         cursor: 'pointer',
@@ -173,7 +173,7 @@ export function CollegeInput({ value, onChange }) {
                                         return (
                                             <>
                                                 {college.slice(0, start)}
-                                                <strong style={{ color: '#e67e00', fontFamily: 'Caveat, cursive', fontSize: 16 }}>
+                                                <strong style={{ color: '#e67e00', fontFamily: 'Caveat, sans-serif', fontSize: 16 }}>
                                                     {college.slice(start, start + query.length)}
                                                 </strong>
                                                 {college.slice(start + query.length)}
