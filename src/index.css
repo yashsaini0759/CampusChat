@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700;800&family=Patrick+Hand&family=Nunito:wght@700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Patrick Hand', cursive;
+  background: #f5dfc4;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+}
+
+/* Autocomplete scrollbar */
+.college-suggestions::-webkit-scrollbar {
+  width: 5px;
+}
+
+.college-suggestions::-webkit-scrollbar-track {
+  background: #fef9f0;
+}
+
+.college-suggestions::-webkit-scrollbar-thumb {
+  background: #f5c842;
+  border-radius: 8px;
+}
