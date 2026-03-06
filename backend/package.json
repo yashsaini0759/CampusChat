@@ -4,6 +4,7 @@
   "description": "Secure real-time anonymous college chat backend — zero message storage",
   "main": "server.js",
   "scripts": {
+    "build": "echo 'No build step required'",
     "start": "node server.js",
     "dev": "nodemon server.js",
     "lint": "eslint ."
